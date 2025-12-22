@@ -17,98 +17,16 @@
             padding: 60px 34px;
         }
         
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3em;
+        .contact-info-only {
+            background-color: #f5f5f5;
+            padding: 2em;
+            border-radius: 4px;
             margin-top: 2em;
-        }
-        
-        .contact-info {
-            background-color: #f5f5f5;
-            padding: 2em;
-            border-radius: 4px;
-        }
-        
-        .contact-form {
-            background-color: #f5f5f5;
-            padding: 2em;
-            border-radius: 4px;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5em;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 0.5em;
-            font-weight: 500;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            font-family: 'futura-pt', sans-serif;
-            font-size: 14px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #fff;
-            color: #1c1c1c;
-            line-height: 1.5;
-        }
-        
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        input[type="date"]:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #ff7a38;
-            box-shadow: 0 0 0 3px rgba(255, 122, 56, 0.1);
-        }
-        
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        
-        button {
-            background-color: #1c1c1c;
-            color: #fff;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 4px;
-            font-family: 'futura-pt', sans-serif;
-            font-weight: 400;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-        
-        button:hover {
-            background-color: #ff7a38;
         }
         
         @media only screen and (max-width: 768px) {
             .page-content {
                 padding: 40px 20px;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2em;
             }
         }
         
@@ -207,59 +125,11 @@
         <article class="page-content">
             <h1>Send henvendelse</h1>
             
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Kontaktinformasjon</h2>
-                    <p><strong>Mail:</strong><br><a href="mailto:janminde194@gmail.com">janminde194@gmail.com</a></p>
-                    <p><strong>Telefon:</strong><br>90 14 13 48</p>
-                    <p><strong>Adresse:</strong><br>Krokåsdalen 120<br>5302 Strusshamn<br>Askøy, Norge</p>
-                </div>
-                
-                <div class="contact-form">
-                    <form onsubmit="return handleSubmit(event)">
-                        <div class="form-group">
-                            <label for="navn">Navn *</label>
-                            <input type="text" id="navn" name="navn" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="epost">E-post *</label>
-                            <input type="email" id="epost" name="epost" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="telefon">Telefon</label>
-                            <input type="tel" id="telefon" name="telefon">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="dato">Dato for arrangement</label>
-                            <input type="date" id="dato" name="dato">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="type">Type arrangement</label>
-                            <select id="type" name="type">
-                                <option value="">Velg...</option>
-                                <option value="Bursdagsfest">Bursdagsfest</option>
-                                <option value="Dåp">Dåp</option>
-                                <option value="Julebord">Julebord</option>
-                                <option value="Konfirmasjon">Konfirmasjon</option>
-                                <option value="Bryllup">Bryllup</option>
-                                <option value="Møte/Kurs">Møte/Kurs</option>
-                                <option value="Foredrag">Foredrag</option>
-                                <option value="Annet">Annet</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="melding">Melding *</label>
-                            <textarea id="melding" name="melding" required></textarea>
-                        </div>
-                        
-                        <button type="submit">Send henvendelse</button>
-                    </form>
-                </div>
+            <div class="contact-info-only">
+                <h2>Kontaktinformasjon</h2>
+                <p><strong>Mail:</strong><br><a href="mailto:janminde194@gmail.com">janminde194@gmail.com</a></p>
+                <p><strong>Telefon:</strong><br>90 14 13 48</p>
+                <p><strong>Adresse:</strong><br>Krokåsdalen 120<br>5302 Strusshamn<br>Askøy, Norge</p>
             </div>
         </article>
     </main>
@@ -297,22 +167,6 @@
         document.getElementById('mobileNavToggle').addEventListener('change', function() {
             document.body.classList.toggle('mobile-nav-open', this.checked);
         });
-        
-        function handleSubmit(e) {
-            e.preventDefault();
-            const navn = document.getElementById('navn').value;
-            const epost = document.getElementById('epost').value;
-            const telefon = document.getElementById('telefon').value;
-            const dato = document.getElementById('dato').value;
-            const type = document.getElementById('type').value;
-            const melding = document.getElementById('melding').value;
-            
-            const subject = `Henvendelse om leie - ${navn}`;
-            const body = `Navn: ${navn}%0DTelefon: ${telefon}%0DDato: ${dato}%0DType: ${type}%0DMelding: ${melding}`;
-            
-            window.location.href = `mailto:janminde194@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-            return false;
-        }
     </script>
 </body>
 </html>
