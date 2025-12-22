@@ -26,33 +26,22 @@
         
         .gallery-item {
             background-color: #f5f5f5;
-            padding: 2em;
+            padding: 0;
             text-align: center;
             border-radius: 4px;
+            overflow: hidden;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         .gallery-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .gallery-item-title {
-            font-size: 18px;
-            font-weight: 500;
-            margin-top: 1em;
-            color: #1c1c1c;
-        }
-        
-        .placeholder-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            font-size: 48px;
         }
         
         @media only screen and (max-width: 768px) {
@@ -151,28 +140,19 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <div class="placeholder-image">📷</div>
-                    <div class="gallery-item-title">Møterom</div>
+                    <img src="assets/images/17200212_10155650136856002_161148562_o.jpg" alt="Krokåsdalen forsamlingshus">
                 </div>
                 <div class="gallery-item">
-                    <div class="placeholder-image">🍳</div>
-                    <div class="gallery-item-title">Kjøkken</div>
+                    <img src="assets/images/17195494_10155650135831002_429769814_o.jpg" alt="Krokåsdalen forsamlingshus">
                 </div>
                 <div class="gallery-item">
-                    <div class="placeholder-image">🌿</div>
-                    <div class="gallery-item-title">Omgivelser</div>
+                    <img src="assets/images/forsamlingshuset_gallery.jpg" alt="Krokåsdalen forsamlingshus">
                 </div>
                 <div class="gallery-item">
-                    <div class="placeholder-image">🎪</div>
-                    <div class="gallery-item-title">Bordoppsett</div>
+                    <img src="assets/images/dekket1.jpg" alt="Dekket">
                 </div>
                 <div class="gallery-item">
-                    <div class="placeholder-image">🎬</div>
-                    <div class="gallery-item-title">Projektor & Lerret</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="placeholder-image">🚗</div>
-                    <div class="gallery-item-title">Parkering</div>
+                    <img src="assets/images/dekket3.jpg" alt="Dekket">
                 </div>
             </div>
             
