@@ -345,77 +345,159 @@ a:hover {
 }
 
 /* ===== MAIN CONTENT ===== */
-.main {
-    width: 100%;
-}
-
-.index-section {
-    padding: 100px 34px;
+#page {
     max-width: 100%;
     margin: 0 auto;
 }
 
-.index-section.index-section-first {
-    background: linear-gradient(135deg, rgba(28, 28, 28, 0.95), rgba(28, 28, 28, 0.85)),
-                url('assets/images/forsamlingshuset.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#content {
+    width: 100%;
 }
 
-.section-content {
+.main-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Hero Image */
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    position: relative;
+    padding-bottom: 29.15%;
+    height: 0;
+    overflow: hidden;
+}
+
+.hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 40px;
     max-width: 1080px;
     margin: 0 auto;
-    padding: 0 34px;
+    padding: 60px 34px;
+    background: #fff;
 }
 
-.index-section.index-section-first .section-title {
-    color: #fff;
-    font-size: 48px;
+.content-left {
+    grid-column: 1;
+}
+
+.content-right {
+    grid-column: 2;
+}
+
+.content-left p,
+.content-right p {
+    font-family: 'futura-pt', sans-serif;
     font-weight: 400;
-    line-height: 1.3;
-    margin-bottom: 1em;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    line-height: 1.6em;
+    color: rgba(0, 0, 0, 0.71);
+    margin: 0 0 1.5em;
 }
 
-.index-section.index-section-first .section-title strong {
-    font-weight: 600;
+.content-left h3 {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    line-height: 1.4em;
+    color: #6c6a6a;
+    margin: 1.5em 0 1em;
 }
 
-.index-section.index-section-first .section-description {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 600px;
+/* Testimonial Block */
+.testimonial-block {
+    margin: 0;
+    padding: 0;
 }
 
-.index-section:nth-child(2) {
-    background-color: #fff;
+.testimonial-block blockquote {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-family: 'futura-pt', sans-serif;
+    color: rgba(0, 0, 0, 0.71);
+    line-height: 1.6em;
 }
 
-.index-section:nth-child(3) {
-    background-color: #f5f5f5;
+.testimonial-block blockquote p {
+    font-size: 15px;
+    margin: 0 0 1em 0;
 }
 
-.index-section:nth-child(4) {
-    background-color: #fff;
+.testimonial-block blockquote span {
+    font-size: 1.5em;
 }
 
-.index-section h2 {
-    font-size: 28px;
+.testimonial-block figcaption {
+    margin-top: 1em;
+    font-family: 'futura-pt', sans-serif;
+    font-size: 14px;
+    color: rgba(28, 28, 28, 0.5);
     font-weight: 400;
-    margin-bottom: 1.5em;
-    margin-top: 0;
+    letter-spacing: 0.05em;
 }
 
-.index-section p {
-    color: rgba(28, 28, 28, 0.8);
-    font-size: 16px;
-    line-height: 1.8;
+/* Content Divider */
+.content-divider {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    margin: 0;
+    max-width: 100%;
+    background: transparent;
+}
+
+/* CTA Grid */
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0;
+    background: #fff;
+}
+
+.cta-item {
+    padding: 60px 34px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.cta-item:nth-child(odd) {
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.cta-item h3 {
+    margin: 0;
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    line-height: 1.4em;
+}
+
+.cta-item h3 a {
+    color: #6c6a6a;
+    text-decoration: none;
+}
+
+.cta-item h3 a:hover {
+    color: #1c1c1c;
 }
 
 /* Testimonial */
@@ -585,8 +667,37 @@ a:hover {
     
     .logo-image {
         max-height: 40px;
+    }    
+    /* Content Grid - Stack on mobile */
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px;
     }
     
+    .content-left {
+        grid-column: 1;
+    }
+    
+    .content-right {
+        grid-column: 1;
+    }
+    
+    .cta-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .cta-item {
+        padding: 40px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    
+    .cta-item:last-child {
+        border-bottom: none;
+    }
+}    
     .index-section {
         padding: 50px 20px;
     }
