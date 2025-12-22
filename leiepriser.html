@@ -31,58 +31,85 @@
     </style>
 </head>
 <body class="collection-type-page">
-    <input type="checkbox" id="mobileNavToggle" class="mobile-nav-toggle-box" hidden />
-    
+        <input type="checkbox" id="mobileNavToggle" class="mobile-nav-toggle-box hidden">
+
     <!-- Mobile Navigation Overlay -->
-    <div id="overlayNav" class="nav-overlay">
-        <nav id="mobileNavigation" class="mobile-nav">
-            <div class="nav-item">
-                <a href="index.html">Hjem</a>
-            </div>
-            <div class="nav-folder">
-                <label for="folder-1">Nyttig informasjon</label>
-                <div class="nav-subnav">
-                    <a href="leiepriser.html" class="active">Leiepris</a>
-                    <a href="veibeskrivelse.html">Veibeskrivelse</a>
+    <div id="overlayNav">
+        <div id="mobileNavWrapper">
+            <nav id="mobileNavigation" data-content-field="navigation">
+                <div class="collection active homepage">
+                    <a href="index.html">Hjem</a>
                 </div>
-            </div>
-            <div class="nav-item">
-                <a href="om-lokalet.html">Om Lokalet</a>
-            </div>
-            <div class="nav-item">
-                <a href="bildegalleri.html">Bildegalleri</a>
-            </div>
-            <div class="nav-item">
-                <a href="kontakt.html">Send henvendelse</a>
-            </div>
-        </nav>
+                <div class="folder">
+                    <input type="checkbox" name="folder-toggle-mobile-1" id="folder-toggle-mobile-1" class="folder-toggle-box hidden">
+                    <label for="folder-toggle-mobile-1" class="folder-toggle-label">Nyttig informasjon</label>
+                    <div class="subnav">
+                        <div class="collection">
+                            <a href="leiepriser.html">Leiepris</a>
+                        </div>
+                        <div class="collection">
+                            <a href="veibeskrivelse.html">Veibeskrivelse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="collection">
+                    <a href="om-lokalet.html">Om Lokalet</a>
+                </div>
+                <div class="collection">
+                    <a href="bildegalleri.html">Bildegalleri</a>
+                </div>
+                <div class="collection">
+                    <a href="kontakt.html">Send henvendelse</a>
+                </div>
+            </nav>
+        </div>
     </div>
 
     <!-- Header -->
-    <header id="header" role="banner" class="header">
+    <header id="header" role="banner">
         <div class="header-inner">
-            <div id="logoWrapper" class="logo-wrapper">
-                <h1 class="logo">
+            <div id="logoWrapper" class="title-logo-wrapper" data-content-field="site-title">
+                <h1 id="logoImage" class="tmpl-loading logo-image">
                     <a href="index.html">
-                        <img src="assets/images/logo.png" alt="Krokåsdalen forsamlingshus" class="logo-image">
+                        <img src="assets/images/logo.png" alt="Krokåsdalen forsamlingshus">
                     </a>
                 </h1>
             </div>
-            <label for="mobileNavToggle" class="mobile-nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile">
+                <div class="top-bar"></div>
+                <div class="middle-bar"></div>
+                <div class="bottom-bar"></div>
             </label>
-            <nav id="headerNav" class="header-nav">
-                <ul>
-                    <li><a href="index.html">Hjem</a></li>
-                    <li><a href="leiepriser.html" class="active">Leiepris</a></li>
-                    <li><a href="veibeskrivelse.html">Veibeskrivelse</a></li>
-                    <li><a href="om-lokalet.html">Om Lokalet</a></li>
-                    <li><a href="bildegalleri.html">Bildegalleri</a></li>
-                    <li><a href="kontakt.html">Send henvendelse</a></li>
-                </ul>
-            </nav>
+            <div id="headerNav" class="tmpl-loading">
+                <div id="mainNavWrapper" class="nav-wrapper desktop-nav-wrapper show-on-scroll">
+                    <nav id="mainNavigation" data-content-field="navigation">
+                        <div class="collection active homepage">
+                            <a href="index.html">Hjem</a>
+                        </div>
+                        <div class="folder">
+                            <input type="checkbox" name="folder-toggle-1" id="folder-toggle-1" class="folder-toggle-box hidden">
+                            <label for="folder-toggle-1" class="folder-toggle-label">Nyttig informasjon</label>
+                            <div class="subnav">
+                                <div class="collection">
+                                    <a href="leiepriser.html">Leiepris</a>
+                                </div>
+                                <div class="collection">
+                                    <a href="veibeskrivelse.html">Veibeskrivelse</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collection">
+                            <a href="om-lokalet.html">Om Lokalet</a>
+                        </div>
+                        <div class="collection">
+                            <a href="bildegalleri.html">Bildegalleri</a>
+                        </div>
+                        <div class="collection">
+                            <a href="kontakt.html">Send henvendelse</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
     </header>
 
