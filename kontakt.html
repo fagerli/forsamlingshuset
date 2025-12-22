@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="no-NO">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Krokåsdalen forsamlingshus</title>
+    <meta name="description" content="Kontakt Krokåsdalen forsamlingshus for leie av festlokale.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-content {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 60px 34px;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3em;
+            margin-top: 2em;
+        }
+        
+        .contact-info {
+            background-color: #f5f5f5;
+            padding: 2em;
+            border-radius: 4px;
+        }
+        
+        .contact-form {
+            background-color: #f5f5f5;
+            padding: 2em;
+            border-radius: 4px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            font-family: 'futura-pt', sans-serif;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #1c1c1c;
+            line-height: 1.5;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #ff7a38;
+            box-shadow: 0 0 0 3px rgba(255, 122, 56, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        button {
+            background-color: #1c1c1c;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-family: 'futura-pt', sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        button:hover {
+            background-color: #ff7a38;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .page-content {
+                padding: 40px 20px;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2em;
+            }
+        }
+        
+        @media only screen and (max-width: 640px) {
+            .page-content {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body class="collection-type-page">
+    <input type="checkbox" id="mobileNavToggle" class="mobile-nav-toggle-box" hidden />
+    
+    <!-- Mobile Navigation Overlay -->
+    <div id="overlayNav" class="nav-overlay">
+        <nav id="mobileNavigation" class="mobile-nav">
+            <div class="nav-item">
+                <a href="index.html">Hjem</a>
+            </div>
+            <div class="nav-folder">
+                <label for="folder-1">Nyttig informasjon</label>
+                <div class="nav-subnav">
+                    <a href="leiepriser.html">Leiepris</a>
+                    <a href="veibeskrivelse.html">Veibeskrivelse</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="om-lokalet.html">Om Lokalet</a>
+            </div>
+            <div class="nav-item">
+                <a href="bildegalleri.html">Bildegalleri</a>
+            </div>
+            <div class="nav-item">
+                <a href="kontakt.html" class="active">Send henvendelse</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header id="header" role="banner" class="header">
+        <div class="header-inner">
+            <div id="logoWrapper" class="logo-wrapper">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="Krokåsdalen forsamlingshus" class="logo-image">
+                    </a>
+                </h1>
+            </div>
+            <label for="mobileNavToggle" class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav id="headerNav" class="header-nav">
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="leiepriser.html">Leiepris</a></li>
+                    <li><a href="veibeskrivelse.html">Veibeskrivelse</a></li>
+                    <li><a href="om-lokalet.html">Om Lokalet</a></li>
+                    <li><a href="bildegalleri.html">Bildegalleri</a></li>
+                    <li><a href="kontakt.html" class="active">Send henvendelse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="main">
+        <article class="page-content">
+            <h1>Send henvendelse</h1>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Kontaktinformasjon</h2>
+                    <p><strong>Mail:</strong><br><a href="mailto:janminde194@gmail.com">janminde194@gmail.com</a></p>
+                    <p><strong>Telefon:</strong><br>90 14 13 48</p>
+                    <p><strong>Adresse:</strong><br>Krokåsdalen 120<br>5302 Strusshamn<br>Askøy, Norge</p>
+                </div>
+                
+                <div class="contact-form">
+                    <form onsubmit="return handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="navn">Navn *</label>
+                            <input type="text" id="navn" name="navn" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="epost">E-post *</label>
+                            <input type="email" id="epost" name="epost" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefon">Telefon</label>
+                            <input type="tel" id="telefon" name="telefon">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dato">Dato for arrangement</label>
+                            <input type="date" id="dato" name="dato">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="type">Type arrangement</label>
+                            <select id="type" name="type">
+                                <option value="">Velg...</option>
+                                <option value="Bursdagsfest">Bursdagsfest</option>
+                                <option value="Dåp">Dåp</option>
+                                <option value="Julebord">Julebord</option>
+                                <option value="Konfirmasjon">Konfirmasjon</option>
+                                <option value="Bryllup">Bryllup</option>
+                                <option value="Møte/Kurs">Møte/Kurs</option>
+                                <option value="Foredrag">Foredrag</option>
+                                <option value="Annet">Annet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="melding">Melding *</label>
+                            <textarea id="melding" name="melding" required></textarea>
+                        </div>
+                        
+                        <button type="submit">Send henvendelse</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Krokåsdalen forsamlingshus</h4>
+                <p>Mail: <a href="mailto:janminde194@gmail.com">janminde194@gmail.com</a></p>
+                <p>Adresse: Krokåsdalen 120, 5302 Strusshamn</p>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="leiepriser.html">Leiepris</a></li>
+                    <li><a href="veibeskrivelse.html">Veibeskrivelse</a></li>
+                    <li><a href="om-lokalet.html">Om Lokalet</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="bildegalleri.html">Bildegalleri</a></li>
+                    <li><a href="kontakt.html">Send henvendelse</a></li>
+                    <li><a href="http://www.facebook.com/551626331">Kristiane Hetlevik</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Krokåsdalen forsamlingshus</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileNavToggle').addEventListener('change', function() {
+            document.body.classList.toggle('mobile-nav-open', this.checked);
+        });
+        
+        function handleSubmit(e) {
+            e.preventDefault();
+            const navn = document.getElementById('navn').value;
+            const epost = document.getElementById('epost').value;
+            const telefon = document.getElementById('telefon').value;
+            const dato = document.getElementById('dato').value;
+            const type = document.getElementById('type').value;
+            const melding = document.getElementById('melding').value;
+            
+            const subject = `Henvendelse om leie - ${navn}`;
+            const body = `Navn: ${navn}%0DTelefon: ${telefon}%0DDato: ${dato}%0DType: ${type}%0DMelding: ${melding}`;
+            
+            window.location.href = `mailto:janminde194@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+            return false;
+        }
+    </script>
+</body>
+</html>

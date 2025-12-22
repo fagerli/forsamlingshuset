@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="no-NO">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildegalleri - Krokåsdalen forsamlingshus</title>
+    <meta name="description" content="Se bilder av Krokåsdalen forsamlingshus.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-content {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 60px 34px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+            margin: 3em 0;
+        }
+        
+        .gallery-item {
+            background-color: #f5f5f5;
+            padding: 2em;
+            text-align: center;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 1em;
+            color: #1c1c1c;
+        }
+        
+        .placeholder-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 48px;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .page-content {
+                padding: 40px 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1.5em;
+            }
+        }
+        
+        @media only screen and (max-width: 640px) {
+            .page-content {
+                padding: 30px 15px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1em;
+            }
+        }
+    </style>
+</head>
+<body class="collection-type-page">
+    <input type="checkbox" id="mobileNavToggle" class="mobile-nav-toggle-box" hidden />
+    
+    <!-- Mobile Navigation Overlay -->
+    <div id="overlayNav" class="nav-overlay">
+        <nav id="mobileNavigation" class="mobile-nav">
+            <div class="nav-item">
+                <a href="index.html">Hjem</a>
+            </div>
+            <div class="nav-folder">
+                <label for="folder-1">Nyttig informasjon</label>
+                <div class="nav-subnav">
+                    <a href="leiepriser.html">Leiepris</a>
+                    <a href="veibeskrivelse.html">Veibeskrivelse</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="om-lokalet.html">Om Lokalet</a>
+            </div>
+            <div class="nav-item">
+                <a href="bildegalleri.html" class="active">Bildegalleri</a>
+            </div>
+            <div class="nav-item">
+                <a href="kontakt.html">Send henvendelse</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header id="header" role="banner" class="header">
+        <div class="header-inner">
+            <div id="logoWrapper" class="logo-wrapper">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="Krokåsdalen forsamlingshus" class="logo-image">
+                    </a>
+                </h1>
+            </div>
+            <label for="mobileNavToggle" class="mobile-nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav id="headerNav" class="header-nav">
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="leiepriser.html">Leiepris</a></li>
+                    <li><a href="veibeskrivelse.html">Veibeskrivelse</a></li>
+                    <li><a href="om-lokalet.html">Om Lokalet</a></li>
+                    <li><a href="bildegalleri.html" class="active">Bildegalleri</a></li>
+                    <li><a href="kontakt.html">Send henvendelse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="main">
+        <article class="page-content">
+            <h1>Bildegalleri</h1>
+            <p>Se bilder fra Krokåsdalen forsamlingshus</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="placeholder-image">📷</div>
+                    <div class="gallery-item-title">Møterom</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">🍳</div>
+                    <div class="gallery-item-title">Kjøkken</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">🌿</div>
+                    <div class="gallery-item-title">Omgivelser</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">🎪</div>
+                    <div class="gallery-item-title">Bordoppsett</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">🎬</div>
+                    <div class="gallery-item-title">Projektor & Lerret</div>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-image">🚗</div>
+                    <div class="gallery-item-title">Parkering</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3em;">
+                <h3><a href="kontakt.html">Send henvendelse om leie →</a></h3>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Krokåsdalen forsamlingshus</h4>
+                <p>Mail: <a href="mailto:janminde194@gmail.com">janminde194@gmail.com</a></p>
+                <p>Adresse: Krokåsdalen 120, 5302 Strusshamn</p>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="leiepriser.html">Leiepris</a></li>
+                    <li><a href="veibeskrivelse.html">Veibeskrivelse</a></li>
+                    <li><a href="om-lokalet.html">Om Lokalet</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="bildegalleri.html">Bildegalleri</a></li>
+                    <li><a href="kontakt.html">Send henvendelse</a></li>
+                    <li><a href="http://www.facebook.com/551626331">Kristiane Hetlevik</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Krokåsdalen forsamlingshus</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileNavToggle').addEventListener('change', function() {
+            document.body.classList.toggle('mobile-nav-open', this.checked);
+        });
+    </script>
+</body>
+</html>
