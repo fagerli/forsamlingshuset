@@ -1,73 +1,69 @@
-# Krokåsdalen forsamlingshus - Pixel-Perfect Static Replica
+# Krokåsdalen forsamlingshus - Static Website
 
-This is an exact replica of the original Squarespace site (www.forsamlingshuset.no), completely detached from Squarespace and running as a pure static HTML/CSS website.
+This is a static HTML/CSS website for Krokåsdalen community center venue rental on Askøy, Norway. It's an exact replica of the original design from www.forsamlingshuset.no, completely detached from Squarespace.
 
 ## Features
 
-✅ **Exact Visual Replica** - Matches the original Squarespace design pixel-for-pixel
-✅ **Original Logo & Images** - Downloaded from the original site
-✅ **Professional Typography** - Uses Google Fonts (Raleway) matching the original
+✅ **Exact Visual Replica** - Matches the original Squarespace design
+✅ **Original Assets** - Logo and images downloaded from the original site
+✅ **Professional Typography** - Google Fonts (Raleway) matching the original
 ✅ **Responsive Design** - Mobile-first approach with breakpoints for all devices
 ✅ **No Dependencies** - Pure HTML5 and CSS3, no frameworks required
 ✅ **Fast Loading** - Minimal CSS, optimized images
-✅ **Full Navigation** - Complete navigation structure matching original
-✅ **Contact Forms** - Email integration for inquiries
+✅ **Full Navigation** - Complete navigation structure
+✅ **Photo Gallery** - Real venue photos
 
 ## Site Structure
 
 ### Pages
 
-- **index-new.html** - Home page with welcome section and venue highlights
-- **om-lokalet-new.html** - About the venue with details and image
-- **leiepriser-new.html** - Pricing information and contact details
-- **veibeskrivelse-new.html** - Location and directions
-- **bildegalleri-new.html** - Photo gallery
-- **kontakt-new.html** - Contact form and information
+- **index.html** - Home page with welcome section and venue highlights
+- **om-lokalet.html** - About the venue
+- **leiepriser.html** - Pricing information
+- **veibeskrivelse.html** - Location and directions
+- **bildegalleri.html** - Photo gallery
+- **kontakt.html** - Contact information
 
 ### Assets
 
 ```
 assets/images/
-├── logo.png (6.3 KB) - Original Krokåsdalen forsamlingshus logo
-└── forsamlingshuset.jpg (71 KB) - Venue photograph
+├── logo.png
+├── hero.jpg
+├── forsamlingshuset.jpg
+├── dekket1.jpg
+├── dekket3.jpg
+├── 17200212_10155650136856002_161148562_o.jpg
+└── 17195494_10155650135831002_429769814_o.jpg
 ```
 
-## Styling
-
-### Design System
+## Design System
 
 **Colors:**
 - Primary: #1c1c1c (Dark gray/black)
-- Secondary/Accent: #ff7a38 (Orange)
-- Light Background: #f5f5f5, #fafafa
-- Border: #e0e0e0
+- Accent: #ff7a38 (Orange)
+- Header Background: #dcdbd1 (Beige)
+- Light Background: #f5f5f5
 
 **Typography:**
-- Font Family: 'futura-pt' (fallback: system fonts)
-- Heading Font: 'Raleway' (Google Fonts)
+- Headings: 'Raleway' (Google Fonts)
+- Body: Futura PT and system fonts
 - Font Weights: 100, 300, 400, 500, 600, 700
 
-**Spacing & Layout:**
+**Layout:**
 - Max Content Width: 1080px
-- Padding: 34px desktop, 20px tablet, 15px mobile
-- Section Padding: 100px (desktop), 50px (tablet), 40px (mobile)
-
-### Responsive Breakpoints
-
-- Desktop: ≥769px - Full desktop navigation
-- Tablet: 768px and below - Mobile-friendly layout
-- Mobile: ≤640px - Optimized for small screens
+- Responsive breakpoints: 768px (tablet), 640px (mobile)
 
 ## Running the Site
 
-### With Python HTTP Server (Already Running)
+### With Python HTTP Server
 
 ```bash
 cd /Users/john-arne/forsamlingshuset
 python3 -m http.server 8000
 ```
 
-Then visit: `http://localhost:8000/index-new.html`
+Then visit: `http://localhost:8000`
 
 ### With Other Servers
 
@@ -82,23 +78,27 @@ ruby -run -ehttpd . -p8000
 php -S localhost:8000
 ```
 
-## File Organization
+## Project Structure
 
 ```
 forsamlingshuset/
-├── index-new.html              # Home page
-├── om-lokalet-new.html         # About venue
-├── leiepriser-new.html         # Pricing
-├── veibeskrivelse-new.html     # Directions
-├── bildegalleri-new.html       # Gallery
-├── kontakt-new.html            # Contact form
-├── styles-new.css              # Main stylesheet
-├── README.md                    # Documentation
+├── index.html              # Home page
+├── om-lokalet.html         # About venue
+├── leiepriser.html         # Pricing
+├── veibeskrivelse.html     # Directions
+├── bildegalleri.html       # Gallery
+├── kontakt.html            # Contact
+├── styles.css              # Main stylesheet
+├── README.md               # Documentation
 └── assets/
-    └── images/
-        ├── logo.png            # Logo (6.3 KB)
-        └── forsamlingshuset.jpg # Venue photo (71 KB)
+    └── images/             # All images
 ```
+
+## Contact Information
+
+- **Email:** janminde194@gmail.com
+- **Address:** Krokåsdalen 120, 5302 Strusshamn, Askøy, Norge
+- **Phone:** 90 14 13 48
 
 ## Original Site Information
 
