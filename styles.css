@@ -322,8 +322,10 @@ a:hover {
 #mobileNavigation > div > a,
 #mobileNavigation > div > label {
     display: block;
-    padding: 0.5em 0;
-    font-size: 54px;
+    padding: 0.45em 0;
+    font-size: 20px; /* reduced for mobile to avoid overlap */
+    line-height: 1.25;
+    letter-spacing: 0.2px;
 }
 
 #mobileNavigation .subnav > div a {
