@@ -342,6 +342,18 @@ a:hover {
     display: none;
 }
 
+/* Hide the actual checkbox input used for the mobile nav toggle so
+   only the styled label (hamburger) is visible on mobile. */
+#mobileNavToggle,
+.mobile-nav-toggle-box {
+    display: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+}
+
 .nav-item, .nav-folder {
     display: none;
 }
